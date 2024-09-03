@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(/assets/fonts/Poppins-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/assets/fonts/Poppins-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+body {
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --Font-size-inputs: 32px;
+    --Font-size-output: 50px;
+    --Font-size-label: 12px;
+
+    background-color: var(--Off-white);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#ageCalc {
+    padding: 4em;
+    border-radius: 15px;
+    border-bottom-right-radius: 10em;
+    background-color: var(--White);
+    width: 90%;
+    max-width: 600px;
+    margin: 2em auto;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    gap: 1em;
+    color: var(--Smokey-grey);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    outline: none;
+    width: 100px;
+    padding: 12px;
+    border: 1px solid var(--Light-grey);
+    border-radius: 5px;
+    font-size: var(--Font-size-inputs);
+}
+
+input:focus {
+    border-color: var(--Purple);
+}
+
+label {
+    text-transform: uppercase;
+    font-size: var(--Font-size-label);
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+.error {
+    color: var(--Light-red);
+    font-size: 12px;
+    margin-top: 0.5em;
+}
+
+#btnLine {
+    border-bottom: 1px solid var(--Light-grey);
+    margin: 2em 0;
+}
+
+#btn {
+    position: absolute;
+    right: 6%;
+    top: 28%;
+    width: 78px;
+    height: 76px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--Purple);
+    cursor: pointer;
+    transition: background-color 0.4s, box-shadow 0.5s;
+}
+
+#btn:hover {
+    background-color: hsl(259, 100%, 70%);
+}
+
+#btn:active {
+    background-color: var(--Off-black);
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--Light-grey);
+    margin: 1em 0;
+    padding: 0;
+  }
+
+#output {
+    display: grid;
+    font-size: var(--Font-size-output);
+    padding: 0;
+}
+
+.output-item {
+    display: flex;
+    align-items: center;
+}
+
+.output-item span {
+    color: var(--Purple);
+    font-weight: 800;
+}
+
+#output h4 {
+    margin: 0;
+    font-weight: 800;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #ageCalc {
+        width: 100%;
+        padding: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    #ageCalc {
+        height: 70vh;
+        width: 80%;
+    }
+
+    input {
+        width: 83px;
+    }
+
+    #btn {
+        width: 70px;
+        height: 70px;
+        right: 40%;
+        top: 24%;
+    }
+
+    hr {
+        margin: 3em 0;
+    }
+}
